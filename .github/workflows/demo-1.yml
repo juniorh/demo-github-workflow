@@ -1,0 +1,10 @@
+name: Action Demo 1
+on: [push]
+jobs:
+  JOB_NAME_1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: id && pwd && ls -la && df -h && mount
+      - name: Show environment variable
+        run: env | sort
